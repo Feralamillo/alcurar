@@ -7,7 +7,7 @@
     "lint": "eslint --ext .js,.jsx,.ts,.tsx src --color",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js --watchAll=false",
-    "isready": "npm run test && npm run build",
+    "isready": "npm run lint && npm run test && npm run build",
     "deploy": "surge -p build -d alcurar.surge.sh"
   },
   "eslintConfig": {
@@ -26,9 +26,12 @@
     ]
   },
   "dependencies": {
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  },
+  "devDependencies": {
     "@babel/core": "7.7.4",
     "@svgr/webpack": "4.3.3",
-    "@typescript-eslint/eslint-plugin": "^2.8.0",
     "@typescript-eslint/parser": "^2.8.0",
     "babel-eslint": "10.0.3",
     "babel-jest": "^24.9.0",
@@ -40,7 +43,6 @@
     "css-loader": "3.2.0",
     "dotenv": "8.2.0",
     "dotenv-expand": "5.1.0",
-    "eslint": "^6.6.0",
     "eslint-config-react-app": "^5.1.0",
     "eslint-loader": "3.0.2",
     "eslint-plugin-flowtype": "3.13.0",
@@ -64,10 +66,8 @@
     "postcss-normalize": "8.0.1",
     "postcss-preset-env": "6.7.0",
     "postcss-safe-parser": "4.0.1",
-    "react": "^16.12.0",
     "react-app-polyfill": "^1.0.5",
     "react-dev-utils": "^10.0.0",
-    "react-dom": "^16.12.0",
     "resolve": "1.12.2",
     "resolve-url-loader": "3.1.1",
     "sass-loader": "8.0.0",
@@ -80,9 +80,7 @@
     "webpack": "4.41.2",
     "webpack-dev-server": "3.9.0",
     "webpack-manifest-plugin": "2.2.0",
-    "workbox-webpack-plugin": "4.3.1"
-  },
-  "devDependencies": {
+    "workbox-webpack-plugin": "4.3.1",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
@@ -94,6 +92,7 @@
     "eslint": "^6.8.0",
     "eslint-config-airbnb-typescript": "^6.3.1",
     "eslint-config-prettier": "^6.9.0",
+    "eslint-import-resolver-typescript": "^2.0.0",
     "eslint-plugin-prettier": "^3.1.2"
   },
   "jest": {
