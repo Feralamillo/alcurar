@@ -20,7 +20,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test --watchAll=false",
     "eject": "react-scripts eject",
-    "isready": "npm run test && npm run build"
+    "isready": "npm run test && npm run build",
+    "deploy": "surge -p build -d alcurar.surge.sh"
   },
   "eslintConfig": {
     "extends": "react-app"
