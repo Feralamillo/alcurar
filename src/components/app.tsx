@@ -2,7 +2,7 @@ import React from 'react';
 
 import carrot from '../img/carrot.png';
 
-import './app.css';
+import './app.scss';
 
 const App: React.FC = () => {
   return (
