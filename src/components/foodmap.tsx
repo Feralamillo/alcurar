@@ -9,8 +9,8 @@ export const Foodmap: React.FC = () => {
   return (
     <div className="container fodmap-page">
       <div className="fodmap-header">
-        <h1>Alcurar</h1>
-        <h2>This is the fodmap page</h2>
+        <h1>Fodmap</h1>
+        <h2>Directory of ingredients</h2>
       </div>
       <div className="ingredients-wrapper row">
         {ingredients.map((ingredient: Ingredient) => (
