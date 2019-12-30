@@ -8,7 +8,7 @@
     "build": "node scripts/build.js",
     "test": "node scripts/test.js --watchAll=false",
     "isready": "npm run lint && npm run test && npm run build",
-    "deploy": "surge -p build -d alcurar.surge.sh"
+    "deploy": "npm run build && mv build/index.html build/200.html && surge -p build -d alcurar.surge.sh"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -26,11 +26,15 @@
     ]
   },
   "dependencies": {
+    "bootstrap": "^4.4.1",
+    "classnames": "^2.2.6",
     "dotenv": "8.2.0",
     "dotenv-expand": "5.1.0",
+    "node-sass": "^4.13.0",
     "react": "^16.12.0",
     "react-dev-utils": "^10.0.0",
-    "react-dom": "^16.12.0"
+    "react-dom": "^16.12.0",
+    "react-router-dom": "^5.1.2"
   },
   "devDependencies": {
     "@babel/core": "7.7.4",
@@ -38,10 +42,12 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "@types/classnames": "^2.2.9",
     "@types/jest": "^24.0.0",
     "@types/node": "^12.0.0",
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0",
+    "@types/react-router-dom": "^5.1.3",
     "@typescript-eslint/eslint-plugin": "^2.8.0",
     "@typescript-eslint/parser": "^2.8.0",
     "babel-eslint": "10.0.3",
