@@ -4,6 +4,9 @@ import ReactDOM from 'react-dom';
 import * as serviceWorker from './serviceWorker';
 import { Root } from './components/root';
 
+import './bootstrap/custom.scss';
+// Put any other imports below so that CSS from your
+// components takes precedence over default styles.
 import './index.scss';
 
 ReactDOM.render(<Root />, document.getElementById('root'));
